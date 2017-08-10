@@ -133,8 +133,29 @@ body{
     }
 }
 
+.seccion{
+    padding: 30px 0;
+}
+
+.seccion p{
+    font-size: 1.2em;
+    text-align: center;
+}
+
 h2{
     font-family: 'Oswald', sans-serif;
+    font-size: 2.4em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2::after{
+    content: '';
+    margin: 0 auto;
+    background-image: url("../img/separador.png");
+    height: 30px;
+    width: 100px;
+    display: block;
 }
 
 /****************HEADER**/
@@ -234,6 +255,7 @@ div.barra{
 
 div.logo {
     width: 80%;
+    float: left;
 }
 div.logo img{
     width: 100%;
@@ -242,7 +264,6 @@ div.logo img{
 @media only screen and (min-width:768px){
     div.logo {
         width: 33%;
-        float: left;
     }
 }
 
@@ -259,6 +280,10 @@ nav.navegacion-principal a{
     text-transform: uppercase;
     text-decoration: none;
     transition: all .6s ease;
+    width: 100%;
+    display: block;
+    text-align: center;
+    /*margin-bottom: 20px;*/
 }
 
 nav.navegacion-principal a:hover{
@@ -283,11 +308,46 @@ nav.navegacion-principal a:last-child:hover{
     }
 
     nav.navegacion-principal a{
-        margin-right: 10px;
         padding: 10px 10px;
         display: inline-block;
+        width: auto;
+        display: inline-block;
+        text-align: center;
+        margin:0 10px 0 0;
     }
 }
+
+
+/*********MENU MOVIL******/
+div.menu-movil{
+    width: 60px;
+    display: block;
+    float: right;
+    text-align: right;
+    margin: 12px;
+}
+
+div.menu-movil:hover{
+    cursor: pointer;
+}
+
+@media only screen and (min-width:768px){
+    div.menu-movil{
+        display: none;
+    }    
+}
+
+div.menu-movil span{
+    height: 8px;
+    margin-bottom: 6px;
+    background-color: white;
+    display: block; 
+}
+
+
+
+
+
 
 
 
